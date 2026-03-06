@@ -16,14 +16,16 @@ SRCS = src/4_bit_adder.v \
       
 
 
-all: $(TOP)
+all: build run
+
+build: $(SRCS)
+	$(VERILATOR) $(VFLAGS) $(SRCS) --main
+
+run:
 	./obj_dir/V$(TOP)
 
-# all: $(TOP)
+# run with random seed:
 # 	./obj_dir/V$(TOP) +verilator+seed+$(shell date +%s)
-
-$(TOP): $(SRCS)
-	$(VERILATOR) $(VFLAGS) $(SRCS) --main
 
 clean:
 	rm -rf obj_dir
