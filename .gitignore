@@ -1,0 +1,11 @@
+# Verilator build output
+**/obj_dir/
+
+# Profiling output
+**/gmon.out
+
+# Claude settings
+.claude/
+
+# PDFs (reference docs, not source)
+**/*.pdf
