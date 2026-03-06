@@ -18,14 +18,17 @@ All commands are run from within `plain/` or `uvm/`:
 # Build and run simulation
 make
 
-# Build only (no run)
-make top
+# Build only (compile, no run)
+make build
+
+# Run only (existing binary)
+make run
 
 # Clean build artifacts
 make clean
 ```
 
-The simulator is **Verilator**. The binary is compiled to `obj_dir/Vtop` and executed automatically by `make all`.
+The simulator is **Verilator**. The binary is compiled to `obj_dir/Vtop`.
 
 To run with a different random seed (commented out in Makefile):
 ```bash
